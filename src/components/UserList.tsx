@@ -133,49 +133,49 @@ const UserList = () => {
 
         <button
           onClick={() => setIsAdding(true)}
-          className="px-4 py-2 bg-green-600 hover:bg-green-400 text-white rounded-lg flex items-center gap-2"
+          className="px-4 py-2 bg-green-800 hover:bg-green-500 text-white rounded-lg flex items-center gap-2"
         >
           <FaPlus /> Create New Item
         </button>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-6">
         {currentItems.map((user) => (
           <div
             key={user.id}
-            className="p-4 border rounded-lg bg-white shadow-lg"
+            className="p-4 border rounded-lg bg-gray-200 shadow-2xl transform transition-transform duration-300 hover:scale-105"
           >
-            <h2 className="text-xl font-semibold text-black">
+            <h2 className="text-xl font-semibold text-black hover:text-gray-600">
               <span className="text-blue-400 text-sm">Name:</span> {user.name}
             </h2>
-            <p className="text-red-700 text-lg">
+            <p className="text-red-700 text-lg hover:text-red-300 cursor-pointer">
               <span className="text-blue-400 text-sm">Email:</span> {user.email}
             </p>
-            <p className="text-gray-800 text-lg">
+            <p className="text-gray-800 text-lg hover:text-gray-400">
               <span className="text-blue-400 text-sm">Company:</span>{" "}
               {user.company.name}
             </p>
-            <p className="text-gray-800 text-lg">
+            <p className="text-gray-800 text-lg hover:text-gray-400">
               <span className="text-blue-400 text-sm">Phone:</span> {user.phone}
             </p>
-            <p className="text-gray-800 text-lg">
+            <p className="text-gray-800 text-lg hover:text-gray-400">
               <span className="text-blue-400 text-sm">Address:</span>{" "}
               {user.address.city}
             </p>
-            <p className="text-gray-800 text-lg">
+            <p className="text-gray-800 text-lg hover:text-gray-400 cursor-pointer">
               <span className="text-blue-400 text-sm">Website:</span>{" "}
               {user.website}
             </p>
             <div className="flex gap-2 justify-between mt-2">
               <button
                 onClick={() => setSelectedUser(user)}
-                className="p-2 bg-gray-800 hover:bg-gray-300 hover:text-gray-800 text-white rounded-lg"
+                className="p-2 bg-gray-800 hover:bg-gray-500 hover:text-gray-800 text-white rounded-lg"
               >
                 <FaEdit size={15} />
               </button>
               <button
                 onClick={() => handleDelete(user.id)}
-                className="p-2 bg-red-600 hover:bg-red-400 text-white rounded-lg"
+                className="p-2 bg-red-800 hover:bg-red-500 text-white rounded-lg"
               >
                 <FaTrash size={15} />
               </button>

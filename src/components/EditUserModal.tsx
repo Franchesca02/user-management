@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { User } from "./dataService";
+import { User } from "../ui/dataService";
 
 interface EditUserModalProps {
   user: User | null;
